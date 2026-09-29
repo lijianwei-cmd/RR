@@ -1,0 +1,18 @@
+{
+  "task": "https://www.teambition.com/task/6aa3744e7acea37fa18af223",
+  "task_title": "短剧播放器 AI 生成标识",
+  "read_date": "2026-09-29",
+  "read_only": true,
+  "api": {"url": "https://wcn31j6bw5rg.feishu.cn/wiki/DlbkwTD57iYDjtkOofYcldCKntd", "revision": 33, "document_version": "v0.8"},
+  "prd": {"url": "https://wcn31j6bw5rg.feishu.cn/wiki/VKoCwrtonikpUPkp2VWcSMlRnnh", "revision": 55},
+  "contracts": {
+    "feed": "data.content[*].drama.isAiWork",
+    "detail": "data.dramaInfo.isAiWork",
+    "allowed_states": ["true", "false", "null", "missing"],
+    "display_rule": "仅 JSON true 表示 AI；null 与缺省为未知，不能混同 false",
+    "versions": "服务端不按客户端版本裁剪；10.39.2/10.40.0 接口对照不代表客户端 UI 验收",
+    "samples": "卡片和剧集 SID 从本轮 feed 响应获取，不重放历史凭据"
+  },
+  "not_covered": ["CMS 源值", "手机和平板 UI", "Figma 样式", "登录态", "离线下载与缓存", "完整旧版本兼容矩阵"],
+  "known_regression_to_cover_later": "首次下载未保存 AI 属性、立即离线播放缺少标识（任务动态中的缺陷，未独立复现）"
+}
